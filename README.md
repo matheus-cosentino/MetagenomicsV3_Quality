@@ -32,9 +32,9 @@ optional arguments:
 ```
 
 
-Run the following code and check all the data you processed in the Output file "MetaGen3_173517.csv"
+Run the following code and check all the data you processed in the Output file "MetaGen3_173518.csv"
 ```bash
-python Illumina_quality_check.py --slurm MetaGen3_173517.out --output MetaGen3_173517.csv
+python Illumina_quality_check.py --slurm MetaGen3_173517.out --output MetaGen3_173518.csv
 ```
 
 # Citation
