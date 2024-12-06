@@ -286,8 +286,10 @@ for section in sections:
         print(f"Error: unexpected format for mapped reads in sample {sample_name}")
         continue
 
+    sample_data[sample_name]['Total Reads'] = f"{int(r1_raw.split()[0]) + int(r2_raw.split()[0])}"
     sample_data[sample_name]['R1 raw (% Q30 BASE)'] = r1_raw
     sample_data[sample_name]['R2 raw (% Q30 BASE)'] = r2_raw 
+    sample_data[sample_name]['Filtered Reads'] = f"{int(r1_passed.split()[0]) + int(r2_passed.split()[0])}"
     sample_data[sample_name]['R1 passed (% Q30 BASE)'] = r1_passed
     sample_data[sample_name]['R2 passed (% Q30 BASE)'] = r2_passed
     sample_data[sample_name]['Reads passed filter'] = paired_quality_reads.split(',')[0]
