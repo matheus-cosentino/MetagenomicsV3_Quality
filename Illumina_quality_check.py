@@ -286,30 +286,30 @@ for section in sections:
         print(f"Error: unexpected format for mapped reads in sample {sample_name}")
         continue
 
-    sample_data[sample_name]['r1_raw'] = r1_raw
-    sample_data[sample_name]['r2_raw'] = r2_raw 
-    sample_data[sample_name]['r1_passed'] = r1_passed
-    sample_data[sample_name]['r2_passed'] = r2_passed
-    sample_data[sample_name]['reads_passed_filter'] = paired_quality_reads.split(',')[0]
-    sample_data[sample_name]['reads_failed_lq'] = paired_quality_reads.split(',')[1]
-    sample_data[sample_name]['reads_failed_short'] = paired_quality_reads.split(',')[2]
-    sample_data[sample_name]['reads_adapter'] = paired_quality_reads.split(',')[3]
-    sample_data[sample_name]['duplication_rate'] = paired_quality_reads.split(',')[4]
-    sample_data[sample_name]['insert_peak'] = paired_quality_reads.split(',')[5]
-    sample_data[sample_name]['paired_mapped_reads'] = mapped_paired.split()[0]
-    sample_data[sample_name]['paired_unmapped_reads'] = mapped_paired.split()[1]
-    sample_data[sample_name]['unpaired_mapped_reads'] = mapped_unpaired.split()[0]
-    sample_data[sample_name]['unpaired_unmapped_reads'] = mapped_unpaired.split()[1]
-    sample_data[sample_name]['contigs_mapped'] = mapped_contigs.split()[0]
-    sample_data[sample_name]['contigs_unmapped'] = mapped_contigs.split()[1]
-    sample_data[sample_name]['kraken_reads_processed'] = kraken_reads.split()[0]
-    sample_data[sample_name]['kraken_reads_classified'] = f"{kraken_reads.split()[1]} {kraken_reads.split()[2]}"
-    sample_data[sample_name]['kraken_reads_unclassified'] = f"{kraken_reads.split()[3]} {kraken_reads.split()[4]}"
-    sample_data[sample_name]['kraken_contigs_processed'] = kraken_contigs.split()[0]
-    sample_data[sample_name]['kraken_contigs_classified'] = f"{kraken_contigs.split()[1]} {kraken_contigs.split()[2]}"
-    sample_data[sample_name]['kraken_contigs_unclassified'] = f"{kraken_contigs.split()[3]} {kraken_contigs.split()[4]}"
-    sample_data[sample_name]['diamond_reads'] = diamond.split()[0]
-    sample_data[sample_name]['diamond_contigs'] = diamond.split()[1]
+    sample_data[sample_name]['R1 raw (% Q30 BASE)'] = r1_raw
+    sample_data[sample_name]['R2 raw (% Q30 BASE)'] = r2_raw 
+    sample_data[sample_name]['R1 passed (% Q30 BASE)'] = r1_passed
+    sample_data[sample_name]['R2 passed (% Q30 BASE)'] = r2_passed
+    sample_data[sample_name]['Reads passed filter'] = paired_quality_reads.split(',')[0]
+    sample_data[sample_name]['Reads failed low quality'] = paired_quality_reads.split(',')[1]
+    sample_data[sample_name]['Reads failed short'] = paired_quality_reads.split(',')[2]
+    sample_data[sample_name]['Reads adapter trimmed'] = paired_quality_reads.split(',')[3]
+    sample_data[sample_name]['Duplication Rate'] = paired_quality_reads.split(',')[4]
+    sample_data[sample_name]['Insert size peak'] = paired_quality_reads.split(',')[5]
+    sample_data[sample_name]['Mapped Paired Reads'] = mapped_paired.split()[0]
+    sample_data[sample_name]['Unmapped Paired Reads'] = mapped_paired.split()[1]
+    sample_data[sample_name]['Mapped Unpaired Reads'] = mapped_unpaired.split()[0]
+    sample_data[sample_name]['Unmapped Unpaired Reads'] = mapped_unpaired.split()[1]
+    sample_data[sample_name]['Mapped Contigs'] = mapped_contigs.split()[0]
+    sample_data[sample_name]['Unmapped Contigs'] = mapped_contigs.split()[1]
+    sample_data[sample_name]['Kraken Reads Processed'] = kraken_reads.split()[0]
+    sample_data[sample_name]['Kraken Reads Classified'] = f"{kraken_reads.split()[1]} {kraken_reads.split()[2]}"
+    sample_data[sample_name]['Kraken Reads Classified'] = f"{kraken_reads.split()[3]} {kraken_reads.split()[4]}"
+    sample_data[sample_name]['Kraken Contigs Processed'] = kraken_contigs.split()[0]
+    sample_data[sample_name]['Kraken Contiga Classified'] = f"{kraken_contigs.split()[1]} {kraken_contigs.split()[2]}"
+    sample_data[sample_name]['Kraken Contigs Unclassified'] = f"{kraken_contigs.split()[3]} {kraken_contigs.split()[4]}"
+    sample_data[sample_name]['Diamond Reads Classified'] = diamond.split()[0]
+    sample_data[sample_name]['Diamond Reads Unclassified'] = diamond.split()[1]
 
 
 # Open the output file in write mode
