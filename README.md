@@ -1,4 +1,4 @@
-# MetagenomicsV3_Quality
+# Metagenomics Quality
 An open access python script to process metagenomics data generated in pipelines of https://doi.org/10.1590/1678-4685-GMB-2023-0015 and https://doi.org/10.3389/fmicb.2022.1002963.
 
 # Quick Tutorial
